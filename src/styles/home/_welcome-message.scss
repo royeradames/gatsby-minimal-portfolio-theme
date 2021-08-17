@@ -25,6 +25,11 @@ $desktop: 1440px;
         
         // center image
         justify-self: center;
+
+        /* have hero image be a background image */
+        @media(min-width: $tablet){
+            z-index: -1;
+        }
     }
 
     &__title{
