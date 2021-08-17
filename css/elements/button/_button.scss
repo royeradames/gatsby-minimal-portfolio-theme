@@ -1,0 +1,57 @@
+.button{
+    //layout
+    display: grid;
+    grid-template:
+        "icon text" 1fr
+        / 4.8rem 1fr
+    ;
+
+    // button size
+    width: 20rem;
+    height: 4.8rem;
+
+    // remove default border 
+    border: none;
+    padding: 0;
+
+    //decoration
+    cursor: pointer;
+
+    &__icon{
+        // center icon
+        justify-self: center;
+        align-self: center;
+
+        &-background{
+            // parent layout
+            grid-area: icon;
+            justify-self: center;
+            align-self: center;
+
+            // cover the right size
+            height: 100%;
+            width: 100%;
+
+            // children layout
+            display: grid;
+            
+        }
+    }
+
+    &__text{
+        // parent layout
+        grid-area: text;
+        justify-self: center;
+        align-self: center;
+
+        //text
+        color: var(--white);
+        font-size: 1.2rem;
+        letter-spacing: .02rem;
+        text-transform: uppercase;
+    }
+}
+
+
+
+

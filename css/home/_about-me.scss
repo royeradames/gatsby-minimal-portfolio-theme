@@ -1,0 +1,84 @@
+$tablet: 768px;
+$desktop: 1440px;
+
+.about-me{
+    // layout
+    display: grid;
+    grid-template:
+        "img" max-content
+        "." 3.2rem
+        "line-top" min-content
+        "." 3.2rem
+        "title" max-content
+        "." 2.8rem
+        "message" max-content
+        "." 2.4rem
+        "button" min-content
+        "." 5.1rem
+        "line-bottom" min-content
+    ;
+    @media(min-width: $tablet){
+        // layout
+        grid-template:
+            "img line-top" min-content
+            "img ." 5rem
+            "img title" max-content
+            "img ." 2.8rem
+            "img message" max-content
+            "img ." 2.4rem
+            "img button" max-content
+            "img ." 4.6rem
+            "img line-bottom" min-content
+            / 1fr 1fr
+        ;
+        column-gap: 6.9rem;
+    }
+    @media(min-width: $desktop){
+        // layout
+        column-gap: 12.5rem;
+        width: 101.5rem;
+        grid-template:
+            "img line-top" min-content
+            "img ." 5rem
+            "img title" max-content
+            "img ." 2.8rem
+            "img message" max-content
+            "img ." 2.4rem
+            "img button" max-content
+            "img ." 4.6rem
+            "img line-bottom" min-content
+            / 1fr 35rem
+        ;
+    }
+    &__selfie{
+        // center image
+        justify-self: center;
+
+        // layout
+        grid-area: img;
+    }
+
+    &__title{
+        // layout
+        grid-area: title;
+    }
+    &__message{
+        grid-area: message;
+    }
+    &__horizontal-line{
+        &-top{
+            grid-area: line-top;
+        }
+        &-bottom{
+            grid-area: line-bottom;
+        }
+    }
+    &__button-link{
+        // layout
+        grid-area: button;
+
+        // fix button link covering all of the button area
+        justify-self: start;
+    }
+
+}

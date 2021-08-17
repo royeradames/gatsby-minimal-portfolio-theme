@@ -1,0 +1,30 @@
+.previews{
+    // layout
+    display: grid;
+    grid-template:
+        "title" min-content
+        "." 4rem
+        "preview-1" max-content
+        "." 3.3rem
+        "preview-2" max-content
+    ;
+    justify-items: center;
+
+    &__horizontal-line{
+        // layout
+        grid-area: line;
+    }
+    &__title{
+        // layout
+        grid-area: title;
+        justify-self: start;
+    }
+    &__preview-1{
+        // layout
+        grid-area: preview-1;
+    }
+    &__preview-2{
+        // layout
+        grid-area: preview-2;
+    }
+}

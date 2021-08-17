@@ -1,0 +1,43 @@
+$desktop: 1440px;
+
+.contact-form{
+    // layout
+    display: grid;
+    grid-template:
+        "." 3.2rem
+        "horizontal-line" min-content
+        "title" min-content
+        "form" 1fr
+        / 1fr
+    ;
+    row-gap: 3.2rem;
+
+    @media(min-width: $desktop){
+        // add desktop layout
+        grid-template: 
+            ". ." 4.7rem
+            "horizontal-line horizontal-line" min-content
+            "title form" 1fr
+            / 1fr 1fr
+        ;
+        row-gap: 4.7rem;
+    }
+    &__horizontal-line{
+        // layout
+        grid-area: horizontal-line;
+
+    }
+    &__title{
+        // layout
+        grid-area: title;
+    }
+    &__form{
+        // parent layout
+        grid-area: form;
+
+        // layout
+        display: grid;
+        grid-template: 1fr/1fr;
+        row-gap: 2.4rem;
+    }
+}

@@ -1,0 +1,22 @@
+.background{
+    // children layout
+    display: grid;
+    row-gap: 2.8rem;
+    grid-template:
+        "title" max-content
+        "message" 1fr
+    ;
+
+    &__horizontal-line{
+        // layout
+        grid-area: line;
+    }
+    &__title{
+        // layout
+        grid-area: title;
+    }
+    &__message{
+        // layout
+        grid-area: message;
+    }
+}

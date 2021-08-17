@@ -1,0 +1,41 @@
+@use "./global";
+
+/* elements */
+@use "./elements/website";
+@use "./elements/nav";
+@use "./elements/social-media";
+@use "./elements/header";
+@use "./elements/footer";
+@use "./elements/contact-me";
+
+// button
+@use "./elements/button/button";
+@use "./elements/button/primary-normal";
+@use "./elements/button/primary-disable";
+@use "./elements/button/secondary-button";
+@use "./elements/button/secondary-normal";
+@use "./elements/button/secondary-disable";
+
+// form elements
+@use "./elements/form-elements";
+
+/* pages */
+// home 
+@use "./home/home";
+@use "./home/welcome-message";
+@use "./home/about-me";
+
+// portfolio
+@use "./portfolio/portfolio";
+
+// project
+@use "./project/project";
+@use "./project/intro";
+@use "./project/background";
+@use "./project/previews";
+@use "./project/other-projects";
+
+// contact-me
+@use "./contact-page/contact-page";
+@use "./contact-page/contact-message";
+@use "./contact-page//contact-form";

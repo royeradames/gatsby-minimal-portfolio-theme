@@ -1,0 +1,39 @@
+$tablet: 768px;
+$desktop: 1440px;
+
+// general styles
+.home{
+    // separate articles
+    display: grid; 
+    row-gap: 9.6rem;
+    @media(min-width: $tablet){
+        // increase white space to separate articles
+        row-gap: 9.6rem;
+    }
+    @media(min-width: $desktop){
+        // increase white space to separate articles
+        row-gap: 15rem;
+    }
+
+    // separate the header and footer
+    margin: 4rem 0 8rem;
+    @media(min-width: $tablet){
+        // increase white space
+        margin: 4.7rem 0 9.6rem;
+    }
+    @media(min-width: $desktop){
+        // increase white space
+        margin: 5.4rem 0 15rem;
+    }
+
+    
+    
+    &__message{
+        // text
+        font-size: 1.6rem;
+        line-height: 3rem;
+        color: var(--gray-blue-900);
+        opacity: .8;
+    }
+
+}

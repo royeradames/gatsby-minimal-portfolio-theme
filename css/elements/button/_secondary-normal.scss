@@ -1,0 +1,15 @@
+.secondary-normal{
+    // text
+    color: var(--gray-blue-900);
+
+    // decoration
+    border: .1rem solid var(--gray-blue-900);
+
+    // on hover
+    &:hover{
+        color: var(--white);
+        background-color: var(--gray-blue-900);
+        border: none;
+    }
+
+}

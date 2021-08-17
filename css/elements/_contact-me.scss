@@ -1,0 +1,49 @@
+$tablet: 768px;
+$desktop: 1440px;
+
+.contact-me{
+    // layout
+    display: grid;
+    justify-items: center;
+    row-gap: 4rem;
+    @media(min-width: $tablet){
+        row-gap: initial;
+        grid-template:
+            "title horizontal-line btn" 1fr
+            / 35rem 1fr min-content
+        ;
+        align-items: center;
+        column-gap: 3.2rem;
+    }
+    &__title{
+        // children layout
+        text-align: center;
+        @media(min-width: $tablet){
+            margin-bottom: initial;
+        }
+
+        @media(min-width: $tablet){
+            // parent layout
+            grid-area: title;
+        }
+        
+    }
+    &__horizontal-line{
+        // hidde
+        display: none;
+
+        @media(min-width: $tablet){
+            // show
+            display: initial;
+
+            // parent layout
+            grid-area: horizontal-line;
+
+            // fix horizontal line being show vertically
+            height: .1rem;
+            width: 100%;
+        }
+    }
+
+    
+}

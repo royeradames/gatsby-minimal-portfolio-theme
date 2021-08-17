@@ -1,0 +1,72 @@
+.form-elements{
+        // layout
+        display: grid;
+        grid-template:
+            "label" min-content
+            "input" 1fr
+            / 1fr
+        ;
+        row-gap: .8rem;
+
+        &__label{
+            // parent layout
+            grid-area: label;
+            
+            // text
+            font-size: 1.3rem;
+            line-height: 3rem;
+            font-weight: bold;
+
+            // decoration
+            color: var(--gray-blue-900);
+            opacity: .8;
+
+        }
+        &__input{
+            // parent layout
+            grid-area: input;
+            padding: .9rem 1.6rem;
+
+            // decoration
+            border: none;
+            background-color: var(--gray-blue-900-1);
+            color: var(--gray-blue-900-4);
+
+            &:active, &:focus{
+                // when inputing make input border green
+                border: .1rem solid var(--green);
+            }
+
+            &-message{
+                // size
+                padding-bottom: 15.2rem;
+            }
+
+        }
+        &__error{
+            &-message{
+                // text: error messages are red and capitalize
+                color: var(--red);
+                text-transform: capitalize;
+            }
+            &-input{
+                // when there is an error high input red
+                border: .1rem solid var(--red);
+            }
+        }
+
+        &__submit{
+        // center text
+        justify-items: center;
+        align-items: center;
+        // remove icon space
+        grid-template: initial;
+
+        // get button on row
+        grid-column: 1;
+        grid-row: 4;
+
+        // move button to the left side
+        justify-self: start;
+    }
+    }

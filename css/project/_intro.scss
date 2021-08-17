@@ -1,0 +1,82 @@
+$tablet: 768px;
+$desktop: 1440px;
+
+.intro{
+    // sm layout
+    display: grid;
+    grid-template:
+        "line-top" min-content
+        "title" max-content 
+        "message" max-content
+        "job-tech-stack" max-content
+        "button" min-content
+        "line-bottom" min-content
+    ;
+    // white space
+    row-gap: 2.4rem;
+    @media(min-width: $tablet){
+        // have empty areas has white space
+        row-gap: initial;
+
+        // tablet layout
+        grid-template:
+            "line-top line-top" min-content
+            ". ." 3.2rem
+            "title message" max-content 
+            ". message" 1.6rem
+            "job-tech-stack  message" max-content
+            ". message" 1.6rem
+            "button message" min-content
+            ". message" 3.2rem
+            "line-bottom line-bottom" min-content
+            / 1fr 1fr
+        ;
+    }
+    @media(min-width: $desktop){
+        grid-template:
+        "line-top" min-content
+        "." 4.8rem
+        "title" max-content 
+        "." 2.9rem
+        "message" max-content
+        "." 2.3rem
+        "job-tech-stack" max-content
+        "." 1.6rem
+        "button" min-content
+        "." 3.2rem
+        "line-bottom" min-content
+        ;
+    }
+    &__horizontal-line{
+        &-top{
+            // layout: add element to grid area
+            grid-area: line-top;
+        }
+        &-bottom{
+            // layout: add element to grid area
+            grid-area: line-bottom;
+        }
+    }
+    &__title{
+        // layout: add element to grid area
+        grid-area: title;
+    }
+    &__message{
+        // layout: add element to grid area
+        grid-area: message;
+    }
+    &__job-title-tech-stack{
+        // layout: add element to grid area
+        grid-area: job-tech-stack;
+        
+        // text styles
+        color: var(--green);
+        font-size: 1.3rem;
+        font-weight: bold;
+        line-height: 3rem;
+    }
+    &__button{
+        // layout: add element to grid area
+        grid-area: button;
+    }
+}

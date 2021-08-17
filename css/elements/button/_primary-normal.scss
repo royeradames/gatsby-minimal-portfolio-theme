@@ -1,0 +1,23 @@
+.button-primary-normal{
+    background-color: var(--blue--900);
+
+    
+    &__icon{
+        stroke: var(--green);
+
+        &-background{
+            background-color: var(--black-100);
+        }
+    }
+
+    // hover state
+    &:hover{
+        background-color: var(--green);
+    }
+    &:hover &__icon{
+        stroke: var(--white);
+    }
+    &:hover &__background{
+        background-color: var(--black-100);
+    }
+}

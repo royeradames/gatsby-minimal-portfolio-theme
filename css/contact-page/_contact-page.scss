@@ -1,0 +1,9 @@
+$desktop: 1440px;
+
+.contact-page{
+    // page from the footer
+    @media(min-width: $desktop){
+        // increase white space
+        margin-bottom: 10.9rem;
+    }
+}

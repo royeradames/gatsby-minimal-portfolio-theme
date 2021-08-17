@@ -1,0 +1,18 @@
+.social-media{
+    // size
+        width: 10.4rem;
+
+        // layout
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    &__icon{
+        // decoration
+        fill: var(--white);
+
+        &:hover{
+            fill: var(--green);
+        }
+    }
+}

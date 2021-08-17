@@ -1,0 +1,59 @@
+$tablet: 768px;
+$desktop: 1440px;
+
+.footer{
+    // layout
+    display: grid;
+    justify-items: center;
+    padding: 5.6rem 0;
+    row-gap: 4rem;
+    @media(min-width: $tablet){
+        grid-template:
+            "logo menu-links social-media" 1fr
+            /min-content min-content 1fr
+        ;
+        column-gap: 4.8rem;
+        // increase footer inner spacing
+        padding: 2.4rem 4rem;
+    }
+    @media(min-width: $desktop){
+        // increase footer inner spacing
+        padding: 2.4rem 16.5rem;
+    }
+
+    // decoration
+    background-color: var(--gray-blue-900);
+    
+    &__logo{
+        // layout
+        grid-area: logo;
+        // change logo color
+        fill: var(--white);
+
+        &:hover{
+            fill: var(--green);
+        }
+    }
+
+    &__nav{
+        @media(min-width: $tablet){
+            // parent layout
+            grid-area: menu-links;
+        }
+        
+        &-link{
+            @media(min-width: $tablet){
+                // decoration
+                color: var(--white);
+            }
+        }
+    }
+
+    &__social-media{
+        @media(min-width: $tablet){
+            // layout
+            grid-area: social-media;
+            justify-self: end;
+        }
+    }
+}

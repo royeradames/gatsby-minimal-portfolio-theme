@@ -1,0 +1,83 @@
+.other-project{
+    // layout
+    display: grid;
+    grid-template:
+        "previous next" 1fr
+        / 1fr 1fr
+    ;
+
+    &__button{
+        // decoration
+        background: none;
+        border: .1rem solid var(--gray-blue-900-15);
+        cursor: pointer;
+
+        // children layout
+        display: grid;
+        grid-template:
+            "." 2.4rem
+            "icon" min-content
+            "." 1.6rem
+            "title" max-content
+            "label" max-content
+        ;
+        &-icon{
+            // layout
+            grid-area: icon;
+        }
+        &-title{
+            // layout
+            grid-area: title;
+        }
+        &-label{
+            // layout
+            grid-area: label;
+        }
+    }
+    &__previous-project{
+        // layout
+        
+        text-align: left;
+
+        // decoration
+        border-left: none;
+        &-link{
+            // layout
+            grid-area: previous;
+
+            // stretch button full area
+            display: inherit;
+        }
+    }
+    &__next-project{
+        // layout
+        text-align: right;
+
+        // decoration
+        border-right: none;
+
+        &-icon{
+            // layout
+            justify-self: end;
+        }
+        
+        &-link{
+            // layout
+            grid-area: next;
+
+            // stretch button full area
+            display: inherit;
+        }
+        
+    }
+
+    &__label{
+        // text
+        font-size: 1.6rem;
+        line-height: 3rem;
+
+        // decoration
+        color: var(--gray-blue-900);
+        opacity: .5;
+    }
+}

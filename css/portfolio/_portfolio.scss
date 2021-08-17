@@ -1,0 +1,165 @@
+$tablet: 768px;
+$desktop: 1440px;
+
+.portfolio{
+    // layout: separate articles
+    display: grid;
+    row-gap: 7.2rem;
+    @media(min-width: $tablet){
+        // add more space between projects
+        row-gap: 8rem;
+    }
+
+    &__contact-me{
+        // add extra white space
+        // while keeping the project spacing dynamic
+        margin-top: .8rem; // + row-gap 7.2rem = total 8rem white space
+        @media(min-width:$tablet){
+            margin-top: 1.6rem; // + row-gap 8rem = total 9.6rem white space
+        }
+        @media(min-width:$desktop){
+            margin-top: 7rem; // + row-gap 8rem = total 15rem white space
+        }
+    }
+    &__project{
+        // layout
+        display: grid;
+        grid-template: 
+            "img" max-content
+            "." 3.2rem
+            "line-top" min-content
+            "." 2.4rem
+            "title" max-content
+            "." 2.4rem
+            "message" max-content
+            "." 2.4rem
+            "button" min-content
+            "." 2.4rem
+            "line-bottom" min-content
+        ;
+        @media(min-width: $tablet){
+            // have space between image and text
+            column-gap: 6.9rem;
+        }
+        @media(min-width: $desktop){
+            // increase white space of img and text
+            column-gap: 12.5rem;
+        }
+        &-odd-pattern{
+            // layout
+            @media(min-width: $tablet){
+                // odd number projects have img to the left
+                grid-template:
+                    "img line-top" min-content
+                    "img ." 3.2rem
+                    "img title" max-content
+                    "img ." 2.9rem
+                    "img message" max-content
+                    "img ." 3.5rem
+                    "img button" max-content
+                    "img ." 5rem
+                    "img line-bottom" min-content
+                    / 1fr 1fr
+                ;
+            }
+            @media(min-width: $desktop){
+                // increase white space
+                grid-template:
+                    "img line-top" min-content
+                    "img ." 10.3rem
+                    "img title" max-content
+                    "img ." 2.8rem
+                    "img message" max-content
+                    "img ." 2.4rem
+                    "img button" max-content
+                    "img ." 10.3rem
+                    "img line-bottom" min-content
+                    / 1fr 1fr
+                ;
+            }
+        }
+        &-even-pattern{
+            // layout
+            @media(min-width: $tablet){
+                // even number projects have img to the right
+                grid-template:
+                    "line-top img" min-content
+                    ". img" 3.2rem
+                    "title img" max-content
+                    ". img" 2.9rem
+                    "message img" max-content
+                    ". img" 3.5rem
+                    "button img" max-content
+                    ". img" 5rem
+                    "line-bottom img" min-content
+                    / 1fr 1fr
+                ;
+            }
+            @media(min-width: $desktop){
+                // increase white space
+                grid-template:
+                    "line-top img" min-content
+                    ". img" 10.3rem
+                    "title img" max-content
+                    ". img" 2.8rem
+                    "message img" max-content
+                    ". img" 2.4rem
+                    "button img" max-content
+                    ". img" 10.3rem
+                    "line-bottom img" min-content
+                    / 1fr 1fr
+                ;
+            }
+        }
+    }
+    &__img{
+        // parent layout: add element to grid area
+        grid-area: img;
+
+        // center image
+        align-self: center;
+        justify-self: center;
+    }
+    &__title{
+        // parent layout: add element to grid area
+        grid-area: title;
+
+        // Capitalize the lower case title
+        text-transform: capitalize;
+    }
+    &__message{
+        // parent layout: add element to grid area
+        grid-area: message;
+
+        // text: size, spacing, and color
+        font-size: 1.5rem;
+        line-height: 3rem;
+        color: var(--gray-blue-900);
+        opacity: .8;
+    }
+    &__button{
+        &-link{
+            // parent layout
+            grid-area: button;
+
+            // make link area wrap the button only
+            justify-self: start;
+        }
+    }
+    &__horizontal-line{
+        &-top{
+            // parent layout
+            grid-area: line-top;
+        }
+        &-bottom{
+            // parent layout
+            grid-area: line-bottom;
+
+            // align with image bottom
+            align-self: end;
+        }
+    }
+
+    
+
+}

@@ -1,0 +1,43 @@
+$table: 768px;
+$desktop: 1440px;
+.nav{
+    // parent layout
+    @media(min-width: $table){
+        justify-self: end;
+    }
+    // layout children
+    display: grid;
+    row-gap: 3.2rem;
+    padding: 4rem 6.3rem;
+    
+    @media(min-width: $table){
+        grid-template:
+            min-content
+            / min-content min-content max-content
+        ;
+        column-gap: 4.2rem;
+        padding: initial;
+        align-content: center;
+    }
+
+    &__link{
+        // layout
+        text-align: center;
+
+        // text
+        font-size: 1.2rem;
+        letter-spacing: .02rem;
+
+        //decoration
+        color: var(--white);
+        text-decoration: none;
+        text-transform: uppercase;
+        @media(min-width: $table){
+            color: var(--gray-blue-900);
+        }
+
+        &:hover{
+            color: var(--green);
+        }
+    }
+}

@@ -1,0 +1,38 @@
+$desktop: 1440px;
+.contact-message{
+    // add mobile layout
+    display: grid;
+    grid-template:
+        "line" min-content
+        "title" min-content
+        "message" 1fr
+        "icons" min-content
+        / 1fr
+    ;
+    // add white space
+    row-gap: 2.4rem;
+
+    
+    &__horizontal-line{
+        // add horiozontal-line to line area
+        grid-area: line;
+    }
+    &__social-media{
+        // add social-media to icons area
+        grid-area: icons;
+
+        &-icon{
+            // change icon colors
+            fill: var(--gray-blue-900);
+        }
+    }
+    
+    &__title{
+        // add title to title area
+        grid-area: title;
+    }
+    &__message{
+        // add message to message area
+        grid-area: message;
+    }
+}

@@ -1,0 +1,98 @@
+$tablet: 768px;
+$desktop: 1440px;
+
+.project{
+    // small layout
+    display: grid;
+    grid-template:
+        "hero" max-content
+        "." 4rem //white space
+        "manage" max-content
+        "." 4.8rem //white space
+        "background-article" max-content
+        "." 4rem //white space
+        "previews" max-content
+        "." 6.4rem // white space
+        "others" 1fr
+        "." 6.4rem // white space
+        "contact-me" max-content
+    ;
+    @media(min-width: $tablet){
+        // increase white space
+        grid-template:
+        "hero" max-content
+        "." 4rem //white space
+        "manage" max-content
+        "." 4rem //white space
+        "background-article" max-content
+        "." 4rem //white space
+        "previews" max-content
+        "." 8rem // white space
+        "others" 1fr
+        "." 8rem // white space
+        "contact-me" max-content
+    ;
+    } 
+    @media(min-width: $desktop){
+        // layout content in 2 columns and increase white space
+        column-gap: 12.5rem;
+        grid-template:
+        "hero hero" max-content
+        ". ." 11.5rem //white space
+        "manage background-article" min-content
+        "manage ." 4rem //white space
+        "manage previews" min-content
+        ". previews" max-content
+        ". ." 6.4rem // white space
+        "others others" 1fr
+        ". ." 15rem // white space
+        "contact-me contact-me" max-content
+        ;
+    } 
+    &__hero{
+        // layout: add element to grid area, and center image
+        grid-area: hero;
+        justify-self: center;
+    }
+    &__intro{
+        // layout: add element to grid area
+        grid-area: manage;
+    }
+    &__background{
+        // layout: add element to grid area
+        grid-area: background-article;
+    }
+    &__previews{
+        // layout: add element to grid area
+        grid-area: previews;
+    }
+    &__others-project{
+        // layout: add element to grid area
+        grid-area: others;
+    }
+    &__contact-me{
+        // layout: add element to grid area
+        grid-area: contact-me;
+    }
+
+    &__title{
+        // text
+        font-size: 3.2rem;
+        font-weight: 400;
+        line-height: 4.2rem;
+        letter-spacing: -0.029rem;
+
+        // decoration
+        color: var(--gray-blue-900);
+    }
+
+    &__message{
+        // text
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 3rem;
+
+        // decoration
+        opacity: .8;
+    }
+}
