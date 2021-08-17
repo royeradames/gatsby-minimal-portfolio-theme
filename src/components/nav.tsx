@@ -22,7 +22,7 @@ const Nav = (props: any) => {
         Portfolio
       </Link>
       <Link
-        to="/contact"
+        to="/contact-form"
         className={`nav__link ${props.footer ? "footer__nav-link" : ""}`}
       >
         Contact Me

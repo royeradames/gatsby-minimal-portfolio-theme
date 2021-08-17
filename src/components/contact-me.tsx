@@ -10,7 +10,7 @@ const ContactMeArticle = (props: { page: string }) => {
       </h2>
       <div className="horizontal-line contact-me__horizontal-line" />
       <Link
-        to="/contact"
+        to="/contact-form"
         className="contact-me__button"
         onClick={() => {
           window.scroll(0, 0)
