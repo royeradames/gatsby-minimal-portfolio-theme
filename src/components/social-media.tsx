@@ -1,7 +1,11 @@
-import React from "react";
-import { ReactComponent as Github } from "../images/icons/github.svg";
-import { ReactComponent as Twitter } from "../images/icons/twitter.svg";
-import { ReactComponent as LinkedIn } from "../images/icons/linkedin.svg";
+/* Labraries */
+import React from "react"
+
+/* SVGs */
+import Github from "../images/icons/github.svg"
+import Twitter from "../images/icons/twitter.svg"
+import LinkedIn from "../images/icons/linkedin.svg"
+
 const SocialMedia = (props: { page?: string }) => {
   return (
     <article
@@ -29,7 +33,7 @@ const SocialMedia = (props: { page?: string }) => {
         />
       </a>
     </article>
-  );
-};
+  )
+}
 
-export default SocialMedia;
+export default SocialMedia

@@ -1,8 +1,14 @@
+/* libraries */
 import React from "react"
 import { Link } from "gatsby"
-import { ReactComponent as Logo } from "../images/logo.svg"
+
+/* components */
 import Nav from "./nav"
 import SocialMedia from "./social-media"
+
+/* SVGs */
+import Logo from "../images/logo.svg"
+
 function Footer() {
   return (
     <>

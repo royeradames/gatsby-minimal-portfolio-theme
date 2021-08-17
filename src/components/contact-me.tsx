@@ -1,5 +1,7 @@
+/* libraries */
 import React from "react"
 import { Link } from "gatsby"
+
 const ContactMeArticle = (props: { page: string }) => {
   return (
     <article className={`contact-me ${props.page}__contact-me`}>

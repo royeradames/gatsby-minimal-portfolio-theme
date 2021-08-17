@@ -1,9 +1,15 @@
+/* Libraries */
 import React, { useState } from "react"
-import { ReactComponent as Logo } from "../images/logo.svg"
-import { ReactComponent as Hamburger } from "../images/icons/hamburger.svg"
-import { ReactComponent as Close } from "../images/icons/close.svg"
 import { Link } from "gatsby"
+
+/* component */
 import Nav from "./nav"
+
+/* SVGs */
+import Logo from "../images/logo.svg"
+import Hamburger from "../images/icons/hamburger.svg"
+import Close from "../images/icons/close.svg"
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const mobileMenuLogic = (
