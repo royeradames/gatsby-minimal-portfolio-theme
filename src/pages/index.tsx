@@ -1,7 +1,7 @@
 /* libraries */
 import React from "react"
 import { Link } from "gatsby"
-
+import { StaticImage } from "gatsby-plugin-image"
 /* SVGs */
 import { ReactComponent as DownArrow } from "../images/icons/down-arrows.svg"
 
@@ -12,40 +12,20 @@ import selfieTablet from "../images/homepage/tablet/image-homepage-profile.jpg"
 import selfieTablet2x from "../images/homepage/tablet/image-homepage-profile@2x.jpg"
 import selfieDesktop from "../images/homepage/desktop/image-homepage-profile.jpg"
 import selfieDesktop2x from "../images/homepage/desktop/image-homepage-profile@2x.jpg"
-import homeHeroMobile from "../images/homepage/mobile/image-homepage-hero.jpg"
-import homeHeroMobile2x from "../images/homepage/mobile/image-homepage-hero@2x.jpg"
-import homeHeroTable from "../images/homepage/tablet/image-homepage-hero.jpg"
-import homeHeroTable2x from "../images/homepage/tablet/image-homepage-hero@2x.jpg"
-import homeHeroDesktop from "../images/homepage/desktop/image-homepage-hero.jpg"
-import homeHeroDesktop2x from "../images/homepage/desktop/image-homepage-hero@2x.jpg"
 
 // components
 import ConctactMeArticle from "../components/contact-me"
-
-// variables
-import mediaQueries from "../viewPortsSize"
 
 function IndexPage() {
   return (
     <>
       <main className="website__pages home">
         <article className="home__welcome-message welcome-message">
-          {/* show the images depending on the sizes, and the px density */}
-          <picture className="home__hero welcome-message__hero">
-            <source
-              srcSet={`${homeHeroDesktop} 1x, ${homeHeroDesktop2x}  2x`}
-              media={mediaQueries.desktop}
-            />
-            <source
-              srcSet={`${homeHeroTable} 1x, ${homeHeroTable2x}  2x`}
-              media={mediaQueries.tablet}
-            />
-            <source srcSet={`${homeHeroMobile} 1x, ${homeHeroMobile2x}  2x`} />
-            <img
-              src={homeHeroMobile}
-              alt="Mac desktop and laptopn on a table."
-            />
-          </picture>
+          <StaticImage
+            src="../images/homepage/image-homepage-hero@2x.jpg"
+            className="home__hero welcome-message__hero"
+            alt="Hero Image"
+          />
           <div className="welcome-message__call-to-action">
             <h1 className="title home__title welcome-message__title">
               Hey, I’m Alex Spencer and I love building beautiful websites
@@ -64,19 +44,11 @@ function IndexPage() {
         </article>
 
         <article className="home__about-me about-me" id="about">
-          <picture className="home__selfie about-me__selfie">
-            <source
-              srcSet={`${selfieDesktop} 1x, ${selfieDesktop2x} 2x`}
-              media="(min-width: 1440px)"
-            />
-            <source
-              srcSet={`${selfieTablet} 1x, ${selfieTablet2x} 2x`}
-              media="(min-width: 768px)"
-            />
-            <source srcSet={`${selfieMobile} 1x, ${selfieMobile2x} 2x`} />
-            <img src={selfieMobile} alt="Selfie" />
-          </picture>
-
+          <StaticImage
+            className="home__selfie about-me__selfie"
+            src="../images/homepage/image-homepage-profile@2x.jpg"
+            alt="Selfie image"
+          />
           <div className="horizontal-line horizontal-line-first about-me__horizontal-line about-me__horizontal-line-top" />
           <h2 className="title home__title about-me__title">About Me</h2>
           <p className="home__message about-me__message">
