@@ -2,23 +2,17 @@
 import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-/* SVGs */
-import { ReactComponent as DownArrow } from "../images/icons/down-arrows.svg"
 
-/* images */
-import selfieMobile from "../images/homepage/mobile/image-homepage-profile.jpg"
-import selfieMobile2x from "../images/homepage/mobile/image-homepage-profile@2x.jpg"
-import selfieTablet from "../images/homepage/tablet/image-homepage-profile.jpg"
-import selfieTablet2x from "../images/homepage/tablet/image-homepage-profile@2x.jpg"
-import selfieDesktop from "../images/homepage/desktop/image-homepage-profile.jpg"
-import selfieDesktop2x from "../images/homepage/desktop/image-homepage-profile@2x.jpg"
+/* SVGs */
+import DownArrow from "../images/icons/down-arrows.svg"
 
 // components
 import ConctactMeArticle from "../components/contact-me"
+import Layout from "../components/Layout"
 
 function IndexPage() {
   return (
-    <>
+    <Layout>
       <main className="website__pages home">
         <article className="home__welcome-message welcome-message">
           <StaticImage
@@ -70,7 +64,7 @@ function IndexPage() {
         </article>
         <ConctactMeArticle page="home" />
       </main>
-    </>
+    </Layout>
   )
 }
 
