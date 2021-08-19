@@ -1,4 +1,4 @@
-const projectSnipeDetails: {
+const projectsSnippet: {
   id: number
   title: string
   message: string
@@ -34,4 +34,4 @@ const projectSnipeDetails: {
   },
 ]
 
-export default projectSnipeDetails
+export default projectsSnippet
