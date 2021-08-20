@@ -84,6 +84,8 @@ $desktop: 1440px;
 
         // decoration
         color: var(--gray-blue-900);
+        /* Capitalize portfolio project button title name  */
+        text-transform: capitalize;
     }
 
     &__message{
