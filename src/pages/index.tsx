@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 /* SVGs */
 import DownArrow from "../images/icons/down-arrows.svg"
 
-// components
+/* components */
 import ConctactMeArticle from "../components/contact-me"
 import Layout from "../components/Layout"
 
