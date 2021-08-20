@@ -60,6 +60,9 @@ $desktop: 1440px;
     &__title{
         // layout: add element to grid area
         grid-area: title;
+
+        /* Capitalize portfolio project title name */
+        text-transform: capitalize;
     }
     &__message{
         // layout: add element to grid area
