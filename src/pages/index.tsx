@@ -1,6 +1,6 @@
 /* libraries */
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 /* SVGs */
@@ -11,10 +11,11 @@ import ConctactMeArticle from "../components/contact-me"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-function IndexPage() {
+function IndexPage({ data }) {
+  const { author }: { author: string } = data.site.siteMetadata
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" description={`Intruduction page for ${author}.`} />
       <main className="website__pages home">
         <article className="home__welcome-message welcome-message">
           <StaticImage
@@ -71,3 +72,13 @@ function IndexPage() {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        author
+      }
+    }
+  }
+`

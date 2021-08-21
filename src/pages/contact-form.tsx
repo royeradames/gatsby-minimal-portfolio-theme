@@ -9,6 +9,7 @@ import axios from "axios"
 import SocialMedia from "../components/social-media"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import { graphql } from "gatsby"
 
 // schema
 const schema = yup.object().shape({
@@ -16,7 +17,8 @@ const schema = yup.object().shape({
   email: yup.string().email().required(),
   message: yup.string().required().min(10),
 })
-const ContactForm = () => {
+const ContactForm = ({ data }) => {
+  const { author }: { author: string } = data.site.siteMetadata
   const {
     register,
     handleSubmit,
@@ -48,7 +50,10 @@ const ContactForm = () => {
 
   return (
     <Layout>
-      <SEO title="Contact Me" />
+      <SEO
+        title="Contact Me"
+        description={`Use the contact form to send an email to ${author}.`}
+      />
       <main className="website__pages contact-page">
         <article className="contact-message">
           <div className="horizontal-line contact-message__horizontal-line " />
@@ -67,7 +72,7 @@ const ContactForm = () => {
         </article>
         <article className="contact-form">
           <div className="horizontal-line contact-form__horizontal-line " />
-          <h2 className="title contact-form__title">Contact Me</h2>
+          <h1 className="title contact-form__title">Contact Me</h1>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="contact-form__form"
@@ -150,3 +155,13 @@ const ContactForm = () => {
 }
 
 export default ContactForm
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        author
+      }
+    }
+  }
+`

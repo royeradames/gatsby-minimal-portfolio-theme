@@ -18,7 +18,7 @@ type snippet = {
 
 export default function ProjectsSnippet({ data }) {
   const { projectsSnippet } = data.allMarkdownRemark
-
+  const { author }: { author: string } = data.site.siteMetadata
   const pattern = (id: number) => {
     const even = id % 2 === 0
     if (even) {
@@ -58,7 +58,10 @@ export default function ProjectsSnippet({ data }) {
   }
   return (
     <Layout>
-      <SEO title="Portfolio" />
+      <SEO
+        title="Portfolio"
+        description={`A list of projects snippets of ${author}`}
+      />
       <main className="website__pages portfolio">
         {UnpackPortfolioList()}
         <ContactMeArticle page="portfolio" />
@@ -83,6 +86,11 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        author
       }
     }
   }

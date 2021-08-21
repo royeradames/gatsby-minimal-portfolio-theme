@@ -7,6 +7,7 @@ import ContactMe from "../components/contact-me"
 import Layout from "../components/Layout"
 import AdjacentProjectButtons from "../components/AdjacentProjectButtons"
 import SEO from "../components/seo"
+import { graphql } from "gatsby"
 
 /* types */
 type OtherProject = {
@@ -29,7 +30,7 @@ type CurrentProject = {
   }
 }
 
-const ProjectsDetail = ({ pageContext }) => {
+const ProjectsDetail = ({ pageContext, data }) => {
   const {
     current,
     next,
@@ -40,6 +41,7 @@ const ProjectsDetail = ({ pageContext }) => {
     previous: OtherProject
   } = pageContext
 
+  const { author }: { author: string } = data.site.siteMetadata
   return (
     <Layout>
       <SEO
@@ -47,6 +49,7 @@ const ProjectsDetail = ({ pageContext }) => {
         title={current.frontmatter.title.replace(/\w\S*/g, w =>
           w.replace(/^\w/, c => c.toUpperCase())
         )}
+        description={`A detail project description of ${current.frontmatter.title} by ${author}.`}
       />
       <article className="website__pages project">
         <GatsbyImage
@@ -102,3 +105,13 @@ const ProjectsDetail = ({ pageContext }) => {
 }
 
 export default ProjectsDetail
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        author
+      }
+    }
+  }
+`
