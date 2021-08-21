@@ -1,105 +1,191 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+# Minimalist portfolio Template
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+You can use my [emailer server](https://github.com/royeradames/email-server.git) for getting the form data to your email.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## Table of contents
 
-## 🚀 Quick start
+- [Minimalist portfolio Template](#minimalist-portfolio-template)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+      - [Home Page](#home-page)
+        - [Home Mobile](#home-mobile)
+        - [Home Tablet](#home-tablet)
+        - [Home Desktop](#home-desktop)
+      - [Portfolio Page](#portfolio-page)
+        - [Portfolio Mobile](#portfolio-mobile)
+        - [Portfolio Tablet](#portfolio-tablet)
+        - [Portfolio Desktop](#portfolio-desktop)
+      - [A specific project Template Page](#a-specific-project-template-page)
+        - [Mobile Project Template Page](#mobile-project-template-page)
+        - [Tablet Project Template Page](#tablet-project-template-page)
+        - [Desktop Project Template Page](#desktop-project-template-page)
+      - [Contact-me Page](#contact-me-page)
+        - [Mobile Contact-me Page](#mobile-contact-me-page)
+        - [Tablet Contact-me Page](#tablet-contact-me-page)
+        - [Desktop Contact-me Page](#desktop-contact-me-page)
+      - [Mobile Menu](#mobile-menu)
+      - [Contact-me Form Error](#contact-me-form-error)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+      - [show the images depending on the sizes, and the px density](#show-the-images-depending-on-the-sizes-and-the-px-density)
+      - [Open React Router <Link> At The Top Of Page With JavaScript](#open-react-router-link-at-the-top-of-page-with-javascript)
+      - [Cleaning Importing SVGs In React](#cleaning-importing-svgs-in-react)
+      - [Using CSS grid to handle white space instead of margin](#using-css-grid-to-handle-white-space-instead-of-margin)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
-1.  **Create a Gatsby site.**
+## Overview
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the hello-world starter.
+### The challenge
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+Users should be able to:
 
-1.  **Start developing.**
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements throughout the site
+- Click the "About Me" call-to-action on the homepage and have the screen scroll down to the next section
+- Receive an error message when the contact form is submitted if:
+  - The `Name`, `Email Address` or `Message` fields are empty should show that the field is required.
+  - The `Email Address` is not formatted correctly should show "Please use a valid email address"
 
-    Navigate into your new site’s directory and start it up.
+### Screenshot
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+#### Home Page
+##### Home Mobile
+![Home Mobile](readme_assets/home/home-mobile.png)
+##### Home Tablet
+![Home tablet](readme_assets/home/home-tablet.png)
+##### Home Desktop
+![Home Desktop](readme_assets/home/home-desktop.png)
+#### Portfolio Page
+##### Portfolio Mobile
+![Portfolio mobile](readme_assets/portfolio/portfolio-mobile.png)
+##### Portfolio Tablet
+![Portfolio tablet](readme_assets/portfolio/portfolio-tablet.png)
+##### Portfolio Desktop
+![Portfolio Desktop](readme_assets/portfolio/portfolio-desktop.png)
+#### A specific project Template Page
 
-1.  **Open the source code and start editing!**
+##### Mobile Project Template Page
+![A specific project Template Page in mobile size](readme_assets/project/project-mobile.png)
+##### Tablet Project Template Page
+![A specific project Template Page in Portfolio size tablet](readme_assets/project/project-tablet.png)
+##### Desktop Project Template Page
+![A specific project Template Page in Portfolio size Desktop](readme_assets/project/project-desktop.png)
+#### Contact-me Page
+##### Mobile Contact-me Page
 
-    Your site is now running at `http://localhost:8000`!
+![Contact-me mobile](readme_assets/contact-me/contact-me-mobile.png)
+##### Tablet Contact-me Page
+![Contact-me tablet](readme_assets/contact-me/contact-me-tablet.png)
+##### Desktop Contact-me Page
+![Contact-me Desktop](readme_assets/contact-me/contact-me-desktop.png)
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+#### Mobile Menu
+![Mobile menu](readme_assets/home-mobile-menu.png)
+#### Contact-me Form Error
+![Contact-me mobile](readme_assets/contact-me-form-error.png)
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
-## 🚀 Quick start (Gatsby Cloud)
+### Links
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+- Blog URL: [Royer Adames Blog](https://medium.com/@royeraadames)
+- Live Site URL: [Royer Adames Minimalist Portfolio](https://royer-adames-minimalist-portfolio.vercel.app/)
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+## My process
 
-## 🧐 What's inside?
+### Built with
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Sass](sass-lang.com/) - For styles
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+### What I learned
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+To see how you can add code snippets, see below:
+#### show the images depending on the sizes, and the px density
+```js
+<picture className="portfolio__img">
+  <source
+    srcSet={`${project.imgLinkDesktop} 1x, ${project.imgLinkDesktop2x} 2x`}
+    media={mediaQueries.desktop}
+  />
+  <source
+    srcSet={`${project.imgLinkTablet} 1x, ${project.imgLinkTablet2x} 2x`}
+    media={mediaQueries.tablet}
+  />
+  <source
+    srcSet={`${project.imgLinkMobile} 1x, ${project.imgLinkMobile2x}`}
+  />
+  <img
+    src={project.imgLinkMobile}
+    alt={`${project.title} project`}
+  />
+</picture>
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+}
+```
+#### Open React Router <Link> At The Top Of Page With JavaScript
+```js
+/* Link to previous and next projects on the project list */
+<Link
+  to={`/projects/${previousProjectDetail.id}/${previousProjectDetail.title}`}
+  className="other-project__previous-project-link"
+  onClick={() => {
+    window.scroll(0, 0);
+  }}
+>
+</Link>
+}
+```
+#### Cleaning Importing SVGs In React
+```js
+// import SVGs
+import { ReactComponent as LeftArrow } from "../images/icons/arrow-left.svg";
+import { ReactComponent as RightArrow } from "../images/icons/arrow-right.svg";
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+// using the SVGs
+<LeftArrow className="other-project__button-icon other-project__previous-project-icon" />
+<RightArrow className="other-project__button-icon other-project__next-project-icon" />
+```
+#### Using CSS grid to handle white space instead of margin
+```css
+grid-template:
+  "hero hero" max-content
+  ". ." 11.5rem //white space
+  "manage background-article" min-content
+  "manage ." 4rem //white space
+  "manage previews" min-content
+  ". previews" max-content
+  ". ." 6.4rem // white space
+  "others others" 1fr
+  ". ." 6.4rem // white space
+  "contact-me contact-me" max-content
+  ;
+```
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+### Useful resources
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+- [Responsive images in React: show images depending on windows size, and the px density](https://royeraadames.medium.com/responsive-images-in-react-show-images-depending-on-windows-size-and-the-px-density-ab8e9caa34c5) - Show the images depending on the sizes, and the px density.
+- [Importing SVGs In React: The Clean Way](https://royeraadames.medium.com/importing-svgs-in-react-the-clean-way-2d6e65da73cd) - Clean way to import SVGs.
+- [Open React Router <Link> At The Top Of Page With JavaScript](https://royeraadames.medium.com/open-react-router-link-at-top-of-page-c8e48a72da99) - Open React Router DOM <Link>s At The Top Of Page With JavaScript so that the user does not feel confuse when navigating the page.
+- [Responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) - How to handle responsive images.
+- [What Img Srcset Does In HTML5: A Quick & Simple Guide](https://html.com/attributes/img-srcset/) - How to handle responsive images.
+- [Style child element when hover on parent](https://stackoverflow.com/questions/7217244/style-child-element-when-hover-on-parent) - How to change the style of children's element when there is hover on the parent element.
+- [HTML Horizontal Line](https://www.bitdegree.org/learn/html-horizontal-line) - How to decide between semantic line or visual line.
+- [set a className on custom react components](https://stackoverflow.com/a/46040808/3044126) - Passing props to add custom CSS classes to components.
+- [Dynamically import images in React](https://www.youtube.com/watch?v=zYE-PbInWNE) - A way to dynamically render images in React.
+- [In ReactJS trying to get params but I get property 'id' does not exist on type '{}'](https://stackoverflow.com/a/64082419/3044126) - React TypeScript fix for params type error.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+## Author
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/products/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+- Blog - [Medium](https://royeraadames.medium.com/)
+- LinkedIn - [royeradames](https://www.linkedin.com/in/royer-adames/)
