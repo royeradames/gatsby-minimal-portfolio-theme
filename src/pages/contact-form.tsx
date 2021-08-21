@@ -8,6 +8,7 @@ import axios from "axios"
 //components
 import SocialMedia from "../components/social-media"
 import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
 // schema
 const schema = yup.object().shape({
@@ -47,6 +48,7 @@ const ContactForm = () => {
 
   return (
     <Layout>
+      <SEO title="Contact Me" />
       <main className="website__pages contact-page">
         <article className="contact-message">
           <div className="horizontal-line contact-message__horizontal-line " />

@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ContactMe from "../components/contact-me"
 import Layout from "../components/Layout"
 import AdjacentProjectButtons from "../components/AdjacentProjectButtons"
+import SEO from "../components/seo"
 
 /* types */
 type OtherProject = {
@@ -41,6 +42,12 @@ const ProjectsDetail = ({ pageContext }) => {
 
   return (
     <Layout>
+      <SEO
+        // to uppercase current project title
+        title={current.frontmatter.title.replace(/\w\S*/g, w =>
+          w.replace(/^\w/, c => c.toUpperCase())
+        )}
+      />
       <article className="website__pages project">
         <GatsbyImage
           image={getImage(current.frontmatter.hero)}

@@ -9,10 +9,12 @@ import DownArrow from "../images/icons/down-arrows.svg"
 /* components */
 import ConctactMeArticle from "../components/contact-me"
 import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
 function IndexPage() {
   return (
     <Layout>
+      <SEO title="Home" />
       <main className="website__pages home">
         <article className="home__welcome-message welcome-message">
           <StaticImage

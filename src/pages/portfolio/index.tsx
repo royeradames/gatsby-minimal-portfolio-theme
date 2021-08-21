@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 /* component */
 import ContactMeArticle from "../../components/contact-me"
+import SEO from "../../components/seo"
 
 /* types */
 type snippet = {
@@ -57,6 +58,7 @@ export default function ProjectsSnippet({ data }) {
   }
   return (
     <Layout>
+      <SEO title="Portfolio" />
       <main className="website__pages portfolio">
         {UnpackPortfolioList()}
         <ContactMeArticle page="portfolio" />
