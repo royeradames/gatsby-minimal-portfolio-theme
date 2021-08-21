@@ -1,13 +1,23 @@
-.social-media{
-    // size
-        width: 10.4rem;
+$tablet: 768px;
 
-        // layout
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+.social-media{
     
+
+    /* side by side from left to right */
+    display: grid;    
+    grid-auto-flow: column;
+    column-gap: 1.5rem;
+
+    @media(min-width: $tablet){
+        justify-self: end;
+    }
+
+    /* center icon */
+    align-items: center;
     &__icon{
+        /* keep the icons small */
+        width: 2.4rem;
+
         // decoration
         fill: var(--white);
 
@@ -16,3 +26,21 @@
         }
     }
 }
+// .social-media{
+//     // size
+//         width: 10.4rem;
+
+//         // layout
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+    
+//     &__icon{
+//         // decoration
+//         fill: var(--white);
+
+//         &:hover{
+//             fill: var(--green);
+//         }
+//     }
+// }
